@@ -1,0 +1,248 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[T1]{fontenc}
+\usepackage{libertine} % Modern, elegant font
+\usepackage{xeCJK} % Support for Chinese characters
+\setCJKmainfont{KaiTi} % Set Chinese font to KaiTi (楷体)
+
+% Color scheme
+\definecolor{primarycolor}{RGB}{72, 61, 139}
+\definecolor{accentcolor}{RGB}{70, 130, 180}
+\definecolor{textcolor}{RGB}{40,40,40}
+\definecolor{linkcolor}{RGB}{70, 130, 180}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=primarycolor
+}
+
+% Section formatting
+\titleformat{\section}
+  {\color{primarycolor}\Large\bfseries\scshape}
+  {}{0em}{}[\color{primarycolor}\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+\titleformat{\subsection}
+  {\color{accentcolor}\large\bfseries}
+  {}{0em}{}
+\titlespacing{\subsection}{0pt}{8pt}{4pt}
+
+% Custom commands
+\newcommand{\cvitem}[4]{
+  \textbf{#1} \hfill \textit{#2} \\
+  \textit{#3} \hfill #4 \\[4pt]
+}
+
+\newcommand{\publication}[1]{
+  \item #1
+  % \textit{\small Contribution: #2}
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Adjust spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\Large\bfseries\color{primarycolor} Curriculum Vitae - Gaoxiang Jin  金高翔} \\[10pt]
+  {\color{textcolor} PhD student \ $|$ \ Max Planck Institute for Astrophysics} \\[10pt]
+  
+  \begin{tabular}{c c c}
+    \faIcon{envelope} \href{mailto:gxjin@mpa-garching.mpg.de}{gxjin@mpa-garching.mpg.de} &
+    % \faIcon{phone} +1 (123) 456-7890 &
+    % \faIcon{home} Munich, Germany
+    \faIcon{globe} \href{https://wwwmpa.mpa-garching.mpg.de/~gxjin/}{wwwmpa.mpa-garching.mpg.de/$\sim$gxjin} &
+    % \faIcon{github} \href{https://github.com/yourusername}{github.com/yourusername} &
+    \faIcon{orcid} \href{https://orcid.org/0000-0003-3087-318X}{ORCID}
+  \end{tabular}
+\end{center}
+
+\vspace{1pt}
+
+% Education
+\section*{Education}
+
+\cvitem{Ph.D. in Astrophysics}{Expected May 2026}{Max Planck Institute for Astrophysics}{Garching, Germany}
+\vspace{-2pt}
+\textit{Thesis:} Spatially Resolved Study on AGN Host Galaxies \\
+\textit{Advisor:} Prof. Guinevere Kauffmann
+
+\vspace{8pt}
+
+\cvitem{M.S. in Astrophysics}{June 2022}{National Astronomical Observatories of Chinese Academy of Sciences}{Beijing, China}
+\vspace{-2pt}
+\textit{Thesis:} Active Galactic Nuclei in Galaxy Mergers \\
+\textit{Advisor:} Prof. Y. Sophia Dai
+
+\vspace{8pt}
+
+\cvitem{B.S. in Astronomy}{June 2019}{Nanjing University, School of Astronomy and Space Science}{Nanjing, China}
+\vspace{-2pt}
+% \textit{Advisor:} Prof. Yong Shi
+
+
+\section*{Research Interests}
+Observational astrophysics, primarily in: Co-evolution of AGN and galaxies, Extragalactic gas ecosystems, Baryon cycle in galaxy evolution, Star formation and quenching of galaxies.
+
+
+\section*{Telescope Time}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item \textit{Palomar 200-inch Hale Telescope}, PI, 4 nights, 2022, optical IFU (Cosmic Web Imager)
+  \item \textit{Xinglong 2.16 meter Telescope}, PI, 0.5 night, 2020, long-slit spectrograph
+  \item \textit{Atacama Large Millimeter/submillimeter Array}, CoI, 12 hours, 2025, ACA
+  \item \textit{James Clerk Maxwell Telescope}, CoI, 33 hours, 2022, submillimeter spectrum
+  \item \textit{Five-hundred-meter Aperture Spherical radio Telescope}, CoI, 43 hours, 2020/2025, spectrum
+  \item \textit{Giant Metrewave Radio Telescope}, CoI, 20 hours, 2022, radio spectrum
+\end{itemize}
+
+% Skills
+\section*{Technical Skills}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item\textbf{Programming:} Python (NumPy, SciPy, Matplotlib, Astropy, scikit-learn), IDL, Shell
+  \item \textbf{Data Analysis:} Integral field spectroscopy (optical to infrared spectra fitting; stellar population synthesis, AGN spectra fitting), SED fitting (familiar with CIGALE, Kcorrect, prospector; experience on photometry+spectral fitting), photometry analysis (familiar with SExtractor for optical and IR images, PyBDSF for radio images); building multiwavelength catalog for large surveys (cross-matching archive data); post-processing of simulation data.
+  \item \textbf{Observational data reduction:} MaNGA (IFU data), LOFAR (radio interferometry imaging), FAST (21-cm spectra), CWI (optical IFU),
+  SDSS (optical photometry and spectra), Subaru-HSC (deep optical imaging), Spitzer (infrared photometry) 
+  \item \textbf{Languages:} English (fluent), Mandarin Chinese (native)
+\end{itemize}
+
+
+\section*{Service and Outreach}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item \textbf{Conference LOC}, The multiscale environment of AGN across cosmic time (2025), From AGN to starburst -- a multi-wavelength synergy (2019)
+  \item \textbf{Journal referee}, The Astrophysical Journal
+  % \item \textbf{Mentor of junior students}, Yilu Tong on galaxy merger classifications (2021-2023), and Ludmila Schneider on catalog cross-matching (2022)
+  \item \textbf{Co-organizer and Volunteer}, Open Day 2024 at the Garching Research Campus
+  \item \textbf{Co-organizer and Volunteer}, Girls Day 2023 at the Max Planck Institute for Astrophysics
+\end{itemize}
+
+
+\section*{Contributed talks}
+
+\begin{itemize}[leftmargin=*, itemsep=4pt, parsep=0pt]
+
+  \item \textbf{The multiscale environment of AGN across cosmic time} \hfill \textit{Munich, Germany, Nov 2025}
+
+  \item \textbf{MIAPbP: The next Generation of AGN Surveys} \hfill \textit{Garching, Germany, March 2025}
+  
+  \item \textbf{European Astronomical Society Meeting} \hfill \textit{Padova, Italy, July 2024}
+
+  \item \textbf{LOFAR Family Meeting} \hfill \textit{Leiden, Netherlands, June 2024}
+
+  \item \textbf{Resolving Galaxy Ecosystems Across All Scales} \hfill \textit{Hong Kong, China, Dec 2023}
+  
+  \item \textbf{LOFAR Family Meeting} \hfill \textit{Olsztyn, Poland, June 2023} 
+
+  \item \textbf{The Multiphase Circumgalactic Medium} \hfill \textit{Munich, Germany, March 2023} 
+
+  \item \textbf{SDSS 2021 Collaboration Meeting} \hfill \textit{Online, Aug 2021} 
+
+  \item \textbf{Month of MaNGA 2020} \hfill \textit{Online, Nov 2020} 
+  
+\end{itemize}
+
+\section*{Summer Schools}
+\begin{itemize}[leftmargin=*, itemsep=4pt, parsep=0pt]
+  \item \textbf{Fundamentals of Deep Learning} \\ \hfill \textit{Garching, Oct 2025}
+  \item \textbf{ESO-Gruber summer school: From Nearby Worlds to Distant Galaxies} \\ \hfill \textit{Garching, June 2025}
+  \item \textbf{18th Heidelberg Summer School: Unraveling Galaxy Evolution with JWST} \\ \hfill \textit{Heidelberg, Sep 2023}
+  \item \textbf{Frontend research at low radio frequency Radio astronomy} \\ \hfill \textit{online, March 2023}
+  \item \textbf{International Summer School on the ISM of Galaxies} \\ \hfill \textit{online, July 2021}
+\end{itemize}
+
+\section*{Awards \& Honors}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item {\bf National Graduate Scholarship}, University of Chinese Academy of Sciences (2021)
+  \item {\bf Outstanding Volunteer Award}, Red Cross Society of China (2017)
+  \item {\bf Top-notch Student Scholarship}, Nanjing University (2015)
+\end{itemize}
+
+
+\newpage
+
+% Publications
+
+\section*{Publication list}
+
+\subsection*{First Author Publications}
+
+\begin{enumerate}[leftmargin=*, itemsep=6pt]
+  \item \textbf{``The Host Galaxies of Radio AGN: New Views from Combining LoTSS and MaNGA Observations''} \\
+  \textbf{Gaoxiang Jin}, Guinevere Kauffmann, Philip N. Best, et al. 2025, \textit{A\&A, 694, A309}
+  
+  \item \textbf{``Comparison of Global HI and H$\alpha$ Line Profiles in MaNGA Galaxy Pairs with FAST''} \\
+  \textbf{Gaoxiang Jin}, Y. Sophia Dai, Cheng Cheng, et al. 2025, \textit{ApJ, 980, 267}
+
+  \item \textbf{``An IFU View of the Active Galactic Nuclei in MaNGA Galaxy Pairs''} \\
+  \textbf{Gaoxiang Jin}, Y. Sophia Dai, Hsi-An Pan, et al. 2021, \textit{ApJ, 923, 6}
+
+  \item \textbf{``A Spatially Resolved Evolutionary Sequence of Multi-wavelength Selected AGN Host Galaxies''} \\
+  \textbf{Gaoxiang Jin}, Guinevere Kauffmann, Michael R. Blanton, et al. \textit{Submitted to MNRAS}
+\end{enumerate}
+
+\subsection*{Co-Authored Publications}
+
+\begin{enumerate}[leftmargin=*, itemsep=6pt]
+  \item \textbf{``The origin of double-peaked narrow emission-line galaxies in MaNGA Survey''} \\
+  Zhiyun Zhang, [5 authors], {\bf Gaoxiang Jin} et al. 2025, \textit{MNRAS, 537, 1561}
+  \\ Contribution: AGN classification
+
+  \item \textbf{``Misaligned external gas acquisition boosts central black hole activities''} \\
+  Yuren Zhou, [4 authors], {\bf Gaoxiang Jin}, et al. 2025, \textit{ApJ, 994, 9}
+  \\ Contribution: provide radio AGN classification
+
+  \item \textbf{``Spectroscopically Identified Emission Line Galaxy Pairs in the WISP Survey''} \\
+  Y. Sophia Dai, [12 authors], {\bf Gaoxiang Jin} et al. 2021, \textit{ApJ, 923, 156}
+  \\ Contribution: figure plotting
+
+  \item \textbf{``Searching for Low-redshift Faint Galaxies with MMT/Hectospec''} \\
+  Cheng Cheng, [14 authors], \textbf{Gaoxiang Jin}, et al. 2021, \textit{ApJS, 256, 4}
+  \\ Contribution: tests on the source extraction
+
+  \item \textbf{``A Complete 16 $\mu$m Selected Galaxy Sample at z$\sim$1: Mid-infrared Spectral Energy Distributions''} \\
+  Jia-Sheng Huang, [21 authors], {\bf Gaoxiang Jin}, et al. 2021, \textit{ApJ, 912, 161}
+  \\ Contribution: metallicity estimation and data analysis
+
+  \item \textbf{``A Statistical Study of the Magnetic Imprints of X-class Solar Flares''} \\
+  Zekun Lu, Weiguang Cao, \textbf{Gaoxiang Jin}, et al. 2019, \textit{ApJ, 876, 133}
+  \\ Contribution: time-series analysis on the magnetic field strength, figure plotting.
+
+  \item \textbf{``What factors shape the radio luminosity of star-forming galaxies? A new calibration from LoTSS-DR2''} \\
+  Shravya Shenoy, [8 authors], {\bf Gaoxiang Jin}, et al. \textit{Submitted to MNRAS}
+  \\ Contribution: calibrate the single-fiber SFR measurement with the IFU data
+
+
+  
+\end{enumerate}
+
+\vspace{10pt}
+\begin{center}
+\colorbox{primarycolor!10}{\parbox{0.9\textwidth}{\centering
+\color{primarycolor}\faIcon{link} \textbf{Full publication list:} \href{https://ui.adsabs.harvard.edu/user/libraries/SsmUZ6A8RSSVci0wvxpnww}{NASA ADS Library}
+}}
+\end{center}
+
+
+
+\end{document}

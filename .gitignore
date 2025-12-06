@@ -1,0 +1,41 @@
+# note files
+*.txt
+
+# LaTeX intermediate files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.dvi
+*.idx
+*.ind
+*.ilg
+*.nav
+*.snm
+*.synctex.gz
+*.fdb_latexmk
+*.blg
+*.bbl
+*.run.xml
+
+# minted package
+_minted*/
+
+# latexmk / build dirs
+latexmkrc
+build/
+output/
+
+# backup / editor files
+*~
+*.bak
+*.backup
+*.swp
+Thumbs.db
+.DS_Store
