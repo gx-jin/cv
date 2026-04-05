@@ -1,3 +1,5 @@
+cv_cn.tex
+
 # note files
 *.txt
 
@@ -28,9 +30,11 @@
 _minted*/
 
 # latexmk / build dirs
-latexmkrc
 build/
 output/
+dist/
+.vscode/
+scripts/
 
 # backup / editor files
 *~
